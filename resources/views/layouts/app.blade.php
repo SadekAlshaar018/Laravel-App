@@ -33,6 +33,7 @@
         @include('inc.messages')
         @yield('content')
       </div>
+      {{-- probleem with ck editor but a solve was change a url source for editor --}}
       <script src="http://localhost:8889/lsapp/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
       <script>
         CKEDITOR.replace( 'article-ckeditor' );
