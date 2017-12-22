@@ -12,7 +12,7 @@
 
        <div id="navbar" class="navbar-collapse collapse">
          <ul class="nav navbar-nav">
-           <li class="active"><a href="public/">Home</a></li>
+           <li class="active"><a href="http://localhost:8889/lsapp/public/">Home</a></li>
            <li><a href="about">About</a></li>
            <li><a href="services">Services</a></li>
            <li><a href="http://localhost:8889/lsapp/public/posts">Blog</a></li>
