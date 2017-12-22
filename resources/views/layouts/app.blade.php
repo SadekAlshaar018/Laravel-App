@@ -1,44 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{config('app.name', 'Restart')}}</title>
-        <link rel="stylesheet" href="{{asset('css/app.css')}}">
-          {{-- bootstrap linke for css --}}
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: silver !important;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: auto;
-                margin: 5px;
-            }
-            h1, p{
-              text-align: center;
-            }
-        </style>
-    </head>
-    <body>
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
         @include('inc.navbar')
-      <div class="container">
-        @include('inc.messages')
-        @yield('content')
-      </div>
-      {{-- probleem with ck editor but a solve was change a url source for editor --}}
-      {{-- ik kan gebruike andere maniere om ckEditor te gebruiken  --}}
-      <script src="{{asset('vendor/unisharp/laravel-ckeditor/ckeditor.js')}}"></script>
-      {{-- <script src="http://localhost:8889/l/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script> --}}
-      <script>
-        CKEDITOR.replace( 'article-ckeditor' );
-      </script>
-    </body>
+        <div class="container">
+          @include('inc.messages')
+          @yield('content')
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+</body>
 </html>
