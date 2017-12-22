@@ -12,6 +12,20 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- Styles -->
+    <style>
+        html, body {
+            background-color: silver !important;
+            color: #636b6f;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 100;
+            height: auto;
+            margin: 5px;
+        }
+        h1, p{
+          text-align: center;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
