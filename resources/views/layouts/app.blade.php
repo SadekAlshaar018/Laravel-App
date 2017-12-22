@@ -15,12 +15,12 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color: silver !important;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: auto;
-                margin: 0;
+                margin: 5px;
             }
             h1, p{
               text-align: center;
@@ -28,13 +28,15 @@
         </style>
     </head>
     <body>
-      @include('inc.navbar')
+        @include('inc.navbar')
       <div class="container">
         @include('inc.messages')
         @yield('content')
       </div>
       {{-- probleem with ck editor but a solve was change a url source for editor --}}
-      <script src="http://localhost:8889/lsapp/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+      {{-- ik kan gebruike andere maniere om ckEditor te gebruiken  --}}
+      <script src="{{asset('vendor/unisharp/laravel-ckeditor/ckeditor.js')}}"></script>
+      {{-- <script src="http://localhost:8889/l/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script> --}}
       <script>
         CKEDITOR.replace( 'article-ckeditor' );
       </script>
