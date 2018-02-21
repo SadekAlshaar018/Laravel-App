@@ -79,6 +79,9 @@
                                    </a>
 
                                    <ul class="dropdown-menu">
+                                     <li>
+                                       <a href="http://localhost:8889/lsapp/public/dashboard">Dashboard</a>
+                                     </li>
                                        <li>
                                            <a href="{{ route('logout') }}"
                                                onclick="event.preventDefault();

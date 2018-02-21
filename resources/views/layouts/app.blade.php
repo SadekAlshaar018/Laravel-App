@@ -12,7 +12,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'RESTART') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -42,6 +42,13 @@
 
     <!-- Scripts -->
 
-    {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
+    <script src="{{ asset('js/app.js') }}"></script>
+    {{-- probleem with ck editor but a solve was change a url source for editor --}}
+    {{-- ik kan gebruike andere maniere om ckEditor te gebruiken  --}}
+    <script src="{{asset('vendor/unisharp/laravel-ckeditor/ckeditor.js')}}"></script>
+    {{-- <script src="http://localhost:8889/l/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script> --}}
+    <script>
+      CKEDITOR.replace( 'article-ckeditor' );
+    </script> 
 </body>
 </html>
